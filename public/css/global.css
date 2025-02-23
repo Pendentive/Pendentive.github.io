@@ -1,0 +1,14 @@
+@import url('./base.css');
+
+html {
+    scroll-behavior: smooth;
+  }
+
+#assessment,
+#project-intro,
+#links,
+#narratives,
+#details,
+#future {
+  scroll-margin-top: var(--header-height);
+}

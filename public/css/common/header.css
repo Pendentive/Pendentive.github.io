@@ -1,0 +1,70 @@
+/* ------------------------------ HEADER ------------------------------ */
+#header {
+  background-color: var(--secondary-color);
+  box-shadow: 0 10px 7px -7px rgba(0, 0, 0, 0.4);
+
+  width: 100%;
+  height: var(--header-height);
+  position: fixed;
+  z-index: 1000;
+
+  font: var(--header-font-family);
+  text-transform: var(--heading-text-transform);
+
+  display: flex;
+  white-space: nowrap;
+}
+
+#header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 0;
+  margin-left: 25px;
+}
+
+#logo img {
+  width: 70px;
+  height: 70px;
+  padding-bottom: 5px;      /* Align the logo baseline with the text */
+}
+
+.logo-text {
+  margin-left: 10px;
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 17px;
+  text-decoration: none;
+  letter-spacing: 0.5px;      /* Increase space between letters */
+}
+.logo-text:hover {
+  color: var(--primary-color);
+}
+
+#navigation {
+  justify-content: flex-end;
+}
+
+#navigation ul {
+  display: flex;
+  align-items: center;        /* Align items vertically */
+  padding: 0 20px;
+}
+
+#navigation li {
+  text-align: center;
+}
+
+#navigation li a {
+  font-weight: 570;
+  font-size: 14px;
+  letter-spacing: -0.3px;     /* decrease space between letters */
+  padding: 0px 15px;
+}
