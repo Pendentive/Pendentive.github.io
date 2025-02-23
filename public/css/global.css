@@ -12,3 +12,7 @@ html {
 #future {
   scroll-margin-top: var(--header-height);
 }
+
+.body-container {
+  padding-top: var(--header-height);
+}
