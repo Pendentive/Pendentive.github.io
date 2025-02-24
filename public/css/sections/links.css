@@ -1,13 +1,53 @@
 .links-container {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
 }
 
-.link-item {
-    flex: 1 1 300px;
-    border: 1px solid #ccc;
-    padding: 1rem;
+.container p {
+    padding-bottom: 2rem;
+}
+
+.angular-link,
+.express-link {
+    background: var(--accent-color);
+    padding: 0.5rem 0.6rem;;
+  
+    border-radius: var(--glow-card-border-radius);
+    box-shadow: var(--glow-card-box-shadow);
+
+}
+
+.express-link {
+    flex: 1; /* Takes up one part of the available space */
+    display: flex;          /* Enable flexbox */
+
+    height: auto;
+}
+
+
+/* Styles for Angular Links */
+.angular-links {
+    flex: 1; /* Takes up one part of the available space */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.angular-link {
+    flex: 1; /* Each Angular link takes up equal height */
     text-align: center;
+}
+
+.angular-link img {
+    max-width: 100%; /* Ensure images fit within their containers */
+    height: auto;
+}
+
+/* General image styling */
+.link-item img {
+    max-width: 100%;
+    height: auto;
 }
