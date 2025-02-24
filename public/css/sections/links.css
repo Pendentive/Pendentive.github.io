@@ -1,6 +1,5 @@
 .links-container {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
@@ -10,23 +9,27 @@
     padding-bottom: 2rem;
 }
 
+.link-item {
+    text-align: center;
+}
+
 .angular-link,
 .express-link {
     background: var(--accent-color);
-    padding: 0.5rem 0.6rem;;
-  
+    padding: 0.5rem 0.6rem;
     border-radius: var(--glow-card-border-radius);
     box-shadow: var(--glow-card-box-shadow);
-
+    flex: 1; /* Each link takes up equal width */
+    margin: 0.5rem;
 }
 
+/* Styles for Express Link */
 .express-link {
-    flex: 1; /* Takes up one part of the available space */
-    display: flex;          /* Enable flexbox */
-
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-
 
 /* Styles for Angular Links */
 .angular-links {
@@ -38,6 +41,7 @@
 
 .angular-link {
     flex: 1; /* Each Angular link takes up equal height */
+    padding: 1rem;
     text-align: center;
 }
 
