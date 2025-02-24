@@ -48,12 +48,11 @@ html {
 .body-content {
     padding: 0 50px;            /* Space between content and edge of page */
     padding-top: 40px;          /* Space between header and content */
-    padding-bottom: 40px;       /* Space between content and footer */
 }
 
 
 
 /* Space betwee sections */
-.partial-section:not(:last-child) {
+.partial-section {
     margin-bottom: 12rem;
 }
