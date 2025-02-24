@@ -1,0 +1,13 @@
+.links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.link-item {
+    flex: 1 1 300px;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    text-align: center;
+}

@@ -1,0 +1,52 @@
+#narratives .cards-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    width: 100%;
+    gap: 3rem;
+}
+
+.narrative-header {
+    padding-bottom: 1.5rem;
+}
+
+/* Responsive Outcomes card row wrap */
+.outcomes-cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+
+.narrative-body,
+.outcomes-card {
+    flex: 1 1 350px;
+    background: var(--accent-color);
+  
+    padding: var(--glow-card-padding);
+  
+    border-radius: var(--glow-card-border-radius);
+    box-shadow: var(--glow-card-box-shadow);
+}
+
+.outcomes-cards-container {
+    padding-bottom: 2rem;
+}
+
+
+
+.achieved-outcomes {
+    background-color: var(--warm-accent-color);
+}
+
+.pending-outcomes {
+    background-color: var(--cool-accent-color);
+}
+  
+/* Remove padding between first h4 and the top of the article */
+#narrative-text article h4:not(:first-of-type) {
+    padding-top: 2.5rem;
+}
+
