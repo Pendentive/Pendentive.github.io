@@ -1,0 +1,35 @@
+<section id="narrative-text">
+    <article>
+        <h4>Artifact</h4>
+        <p>
+            The original application artifact was a MEAN stack application developed in CS-465 Full Stack Development. The application showcased creating an Express customer frontend, linking this frontend to a MongoDB database via an API. An admin frontend was then developed using Angular and was also linked to the database via an API. The admin frontend could then be used to alter the data that was presented to the frontend.
+        </p>
+
+        <h4>Justification</h4>
+        <p>
+            The artifact was chosen as I felt it would force me to design large enhancements based on a product in which I had little input during its original development. In this manner, I could showcase my ability to take a pre-existing code base and further develop it using my software engineering toolbelt. The artifact has been improved in many ways so far. The MEAN application customer frontend has been entirely redesigned using partials, layouts, and now includes the ability to store each front-end component (FEC) in the database. These FECs can be used on any page on the website with their attributes stored in the database, where they can later be edited on the admin frontend.
+        </p>
+        <p>
+            The admin frontend is still under development, but the proof of concept has been delivered via a minimum viable product (MVP). While this may seem underdeveloped for the current enhancement, my intent was to showcase the admin modification of the FECs, database model design, and image search implementation as the keystones of my second enhancement. I also wanted to demonstrate that my original data structure organization for the FECs upheld best practices such as Separation of Concerns (SoC).
+        </p>
+        <p>
+            The admin MVP currently allows modification of a single FEC via the database. The FEC can only be accessed once authenticated, supporting security best practices, and while barebones, it displays all attributes of the current FEC's values and updates the database accordingly. I feel I met my planned course outcomes for this enhancement. All changes to the code base have been reflected through continual commits and versioning. I admit the SDD needs further updating as the backend evolves and additional API calls become necessary for enhancement 2. Stakeholder input has been taken at every iteration, as evidenced by the working wireframes and site updates that informed decisions on which attributes to include in the API models.
+        </p>
+
+        <h4>Initial Development</h4>
+        <p>
+            In the early stages of development, the project began with a simple vision: to create a dynamic MEAN stack application that could seamlessly integrate a customer frontend with an admin interface. The initial design focused on establishing a robust connection between Express, Angular, and MongoDB, setting the stage for future enhancements.
+        </p>
+        <p>
+            Although the early version lacked many modern best practices, it provided a critical foundation that highlighted key areas for improvement. This phase allowed me to identify the limitations of static page management and the need for modular, dynamic components—a realization that later drove the major enhancements.
+        </p>
+
+        <h4>Reflection</h4>
+        <p>
+            I learned more than I planned throughout this journey. As one of my prime objectives was to implement modern best practices, I had to refactor much of the outdated code base. This was a challenging process, and I took a leapfrog approach to development: maintaining the old components while adding new elements. Although the project became somewhat cluttered due to effectively having two code bases, troubleshooting was greatly simplified by comparing the old methods with the new implementations.
+        </p>
+        <p>
+            In the end, I was very happy with my data structure planning and implementation, as it significantly simplified the structure, access, and display of elements across multiple web pages. While I am not entirely satisfied with the current security measures—which remain at a basic level—I plan to improve them in future projects. This experience reinforced the importance of having a solid, adaptable plan from the start.
+        </p>
+    </article>
+</section>

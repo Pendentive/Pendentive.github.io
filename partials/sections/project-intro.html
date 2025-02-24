@@ -1,0 +1,124 @@
+<section id="project-intro" class="partial-section">
+    <div class="container">
+        <h1>Project Introduction</h1>
+        <p>
+            <!-- Describe the project briefly. Use information from your readme or project summary. -->
+            This project started as a MEAN stack application and has been enhanced to demonstrate improved functionality and design.
+        </p>
+    </div>
+
+    <section id="readme-section">
+        <!-- Introduction -->
+        <div class="introduction">
+            <p>
+                The meanFocus application is a three-tier MEAN stack solution that manages customer-facing pages and a dynamic admin system. It leverages an Express front-end, an API server, and an Angular admin interface to unify content creation and distribution. MongoDB, accessed through Mongoose, stores data in a schema-free manner, easing the integration of new features as the project grows.
+            </p>
+        </div>
+
+        <!-- Cards Container -->
+        <div class="cards-container">
+            <!-- Architecture Card -->
+            <div class="card">
+                <h3>Architecture</h3>
+                <p>
+                    meanFocus relies on the MEAN stack (MongoDB, Express, Angular, Node.js). It is divided into three major parts:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Customer-Facing Express Front-End</strong>
+                        <ul>
+                            <li>Built with Express and Express-Handlebars, serving routes and layouts dynamically.</li>
+                            <li>Uses front-end components (FEC) to unify how pages (e.g., landing, personal portfolio) are constructed.</li>
+                            <li>Renders each page by retrieving a page object from the API, parsing a list of FECs, and mapping them to partial templates.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>API Server (Express)</strong>
+                        <ul>
+                            <li>Consumes and delivers data through RESTful routes, returning JSON objects containing pages, components, and image references.</li>
+                            <li>Allows updates for both the Express front-end and Angular admin, providing a shared structure (a page object) that includes FECs such as text blocks, galleries, and repeaters.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Angular Admin Front-End</strong>
+                        <ul>
+                            <li>A single-page application (SPA) that loads page objects and dynamically sets up form-based editors.</li>
+                            <li>The PageEditorComponent reads a page’s array of components and renders individual edit components, such as EditGalleryHeroVertComponent.</li>
+                            <li>Submissions from these edit components are packaged into JSON and sent back to the API for storage.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Functionality Card -->
+            <div class="card">
+                <h3>Functionality</h3>
+                <ul>
+                    <li>
+                        <strong>FEC (Front-End Components):</strong>
+                        <p>
+                            Modular objects that function as deployable page elements with unified interfaces, composed of anything from galleries to text blocks. Unique identifiers let you reuse or swap out components easily across multiple pages.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Angular-based Edit System:</strong>
+                        <p>
+                            Within the PageEditorComponent, each FEC is represented by a form. This approach keeps the component logic centralized and allows for direct, item-by-item updates without confusing abstraction.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Page Publishing:</strong>
+                        <p>
+                            Once edits are saved, the API updates relevant FECs (e.g., GalleryHeroVert, RepeaterMenu). Express site refreshes reflect immediate changes without rebuilding the entire codebase.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Security:</strong>
+                        <p>
+                            Authentication and role checks ensure that unauthorized users cannot access, modify, or remove existing data. User roles also define available editable page access in the Angular front-end, and guarded routes confine data access and manipulation behind authentication.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Data Flow Card -->
+            <div class="card">
+                <h3>Data Flow</h3>
+                <ol>
+                    <li>A customer visits the Express site and is routed to a page (e.g., “Landing Page” or “Portfolio Personal”).</li>
+                    <li>Express fetches the corresponding page object from the API.</li>
+                    <li>The API returns metadata (FEC arrays, images, and layout configurations), which Express uses to construct a final page with partial templates for each component type.</li>
+                    <li>Simultaneously, admin users log into the Angular app, select a page through a top-bar navigation, and retrieve the page object from the API.</li>
+                    <li>Each included FEC is displayed in a dedicated edit component, allowing quick edits (e.g., swapping images or adjusting text).</li>
+                    <li>Upon saving, the updated data is posted back to the API, which modifies MongoDB.</li>
+                    <li>The site updates automatically, reflecting changes in the FEC structure or its content.</li>
+                </ol>
+            </div>
+
+            <!-- Testing Card -->
+            <div class="card">
+                <h3>Testing</h3>
+                <ul>
+                    <li>
+                        <strong>Postman Tests:</strong>
+                        <p>
+                            Ensure that CRUD operations work properly for pages, images, and special component fields such as repeating menus.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>UI Smoke Tests:</strong>
+                        <p>
+                            Verify that the Angular admin app renders correct forms for each component (gallery, text blocks, etc.), sends data back properly, and that the data is both accepted by the API and updated in the database.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Security Checks:</strong>
+                        <p>
+                            Confirm that routes require valid authentication tokens and that editors only modify allowed pages where permitted.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</section>

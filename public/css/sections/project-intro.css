@@ -1,0 +1,27 @@
+#readme-section .cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    gap: 2rem;
+
+    padding-top: 3rem;
+}
+
+.card {
+  flex: 1 1 350px;
+  background: var(--accent-color);
+
+  padding: var(--glow-card-padding);
+ 
+  border-radius: var(--glow-card-border-radius);
+  box-shadow: var(--glow-card-box-shadow);
+
+  list-style: disc;
+}
+  
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%; /* Full width on smaller screens */
+  }
+}

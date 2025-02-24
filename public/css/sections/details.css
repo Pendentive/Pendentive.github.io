@@ -1,0 +1,19 @@
+.detail-item {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.detail-item.alternate {
+    flex-direction: row-reverse;
+}
+
+.detail-media {
+    flex: 1;
+    padding: 1rem;
+}
+
+.detail-description {
+    flex: 1;
+    padding: 1rem;
+}

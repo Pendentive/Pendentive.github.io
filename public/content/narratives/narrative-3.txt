@@ -1,0 +1,55 @@
+<section id="narrative-text">
+    <article>
+      <h4>Artifact</h4>
+      <p>
+        The original application artifact was a MEAN stack application developed in CS-465 Full Stack Development. The application showcases creating an Express customer frontend, linking the frontend to a MongoDB database via the API. An admin frontend was then developed using Angular and was also linked to the database via the API. The admin frontend could then be used to alter the data that was presented to the frontend through interacting with the API.
+      </p>
+  
+      <h4>Justification</h4>
+      <p>
+        The artifact was chosen to show meaningful enhancements across three major enhancements. Specifically for Databases, I felt I could add and implement user roles, incorporate authorization throughout the entire application, and lastly add API-side Role-Based Access Control (RBAC). With this enhancement come many indirect database features as well, such as selective data loading based on role, improved access speed, and reduced database access load. These features showcase my ability to enhance database security, efficiency, and overall database flexibility via programmatic API routes and calls.
+      </p>
+      <p>
+        This enhancement generalized access to the database via programmatic features, improved security throughout the application—especially for calls directly to the database via the API—and configured the Angular admin site for data access, update, and Frontend Express Components (FECs) display.
+      </p>
+  
+      <h4>Key Features of the Enhancement</h4>
+      <ol>
+        <li>
+          <strong>Generalized API routes</strong>
+          <p>
+            All API routes for components were consolidated into a single route: <code>.route('/components/:componentType/:id')</code>. This enables both the Angular and Express sites to load page elements in loops or by array. By simplifying API calls, the entire application can be more secure. A single route serves as the entry point for all components that contain FEC data.
+          </p>
+        </li>
+        <li>
+          <strong>User Roles</strong>
+          <p>
+            User roles were created and the entire application was refactored to accept new JWT tokens.
+          </p>
+        </li>
+        <li>
+          <strong>RBAC</strong>
+          <p>
+            User roles limit access to the page documents, which contain all the web page's view elements and data outside of the header and footer. This ensures that vital, secure data is locked behind the appropriate user role. The populated JSON responses are also filtered based on role, so even if an authenticated editor accesses the same route as an admin, only the necessary data is returned.
+          </p>
+        </li>
+        <li>
+          <strong>Refactored Angular Admin and Express Layouts</strong>
+          <p>
+            The Angular admin site was reconfigured for component display and update. The entire site was cleaned of old files, and authentication was reimplemented with new controllers, auth guards, and HTTP interception. The Express layouts remain separate, as I plan for dynamic page generation in the future, but now pages capture automatically generated variable names and set attributes dynamically.
+          </p>
+        </li>
+      </ol>
+      <p>
+        I met course outcomes three, four, and five during enhancement three. I am very satisfied with the level of security employed, as previous enhancements lacked sufficient security integration by my standards. While all course outcomes have been achieved, they will continue to be refined in subsequent enhancements.
+      </p>
+  
+      <h4>Reflection</h4>
+      <p>
+        This enhancement brought both overwhelming success and significant challenges. While the RBAC features took considerable time to implement, I achieved more than I initially anticipated. Although the RBAC code needs further refactoring for maintainability, it is functional and will be the focus of future improvements. I realized that generalizing the component routes not only simplified API calls but also allowed me to abstract component logic into an external controller, ensuring that API calls remain consistent regardless of individual FEC requirements.
+      </p>
+      <p>
+        Additionally, the Angular site was overhauled to support secure, efficient component updates. Authentication, authorization, and dynamic styling via standardized CSS and material design have all contributed to a more robust and user-friendly admin interface. This enhancement was undoubtedly the most technically challenging, but it has greatly improved both security and maintainability.
+      </p>
+    </article>
+  </section>

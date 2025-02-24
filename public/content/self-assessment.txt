@@ -1,0 +1,14 @@
+<section id="self-fassessment-text">
+    <article>
+        <p>
+            <!-- Your self-assessment text goes here. Explain your background, strengths, and a brief overview of your experience. -->
+            As a dedicated and forward-looking software developer, I have embraced every opportunity during my Computer Science program to build a strong foundation in modern software engineering practices. I approach projects with a passion to create modular, efficient, and maintainable solutions that not only meet current requirements but also predict future requirements. My experience has honed my ability to work well in team environments, communicate well with stakeholders, and adapt to rapidly evolving technologies—abilities that I am eager to bring to a collaborative professional setting.
+        </p>
+        <p>
+            Throughout my academic and project work, I have learned that a project does not end with you; it is an ever-evolving process that requires planning and refinement over time. The three most critical concepts I have embraced are the importance of designing before coding, recognizing that security must be integrated at every stage of development, and understanding that software must be adaptable to change. I have demonstrated these skills through user story–driven design, full-stack development and maintenance, software stack integration, and rigorous database configuration and security practices. My firsthand experience in modular architecture and programmatic, dynamic components has taught me the importance of not compromising on designing systems that do not only act fast and excellent in power but also extremely upgradable and maintainable. For the near term, my five-year goal is to specialize in deeper integration and testing of software components and venture into leading edge projects with robots, artificial intelligence, and safe software development.
+        </p>
+        <p>
+            My aspiration is to lead projects that pioneer on the efficiency and modular architecture fronts so that every system I create is stable, scalable, and secure. Dedicated to continuous learning and personal growth, I am confident that my technical expertise, collaborator mindset, and focus on design-first solutions will enable me to make a valuable contribution to both the consumers and producers of integrated software.
+        </p>
+    </article>
+</section>

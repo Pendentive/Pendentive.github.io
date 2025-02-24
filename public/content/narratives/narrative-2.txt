@@ -1,0 +1,64 @@
+<section id="narrative-text">
+    <article>
+        <h4>Artifact</h4>
+        <p>
+            The original application artifact was a MEAN stack application developed in CS-465 Full Stack Development. The application showcases creating an Express customer frontend, linking the frontend to a MongoDB database via the API. An admin frontend was then developed using Angular and was also linked to the database via the API. The admin frontend could then be used to alter the data that was presented to the frontend.
+        </p>
+
+        <h4>Justification</h4>
+        <p>
+            The artifact was chosen to show meaningful enhancements across three major enhancements. Specifically for Algorithms and Data Structures, I felt I could improve upon the original overall data delivery mechanisms, the data structures used, and incorporate programmatic creation of webpages by utilizing OOP principles. The original product used many static pages and discrete mechanisms for adjusting very specific portions of the application. To improve maintainability, modularity, and encapsulation, I focused on improving these mechanisms and data structures throughout the application.
+        </p>
+        <p>
+            This enhancement refactored the Express frontend model pattern, controller pattern, and the API model hierarchy by introducing the base model and page model. While the previous enhancement introduced the Customer Frontend Components (FECs), this enhancement builds upon these by introducing complex data structures to simplify the algorithms required to apply CRUD operations through the API.
+        </p>
+
+        <h4>Key Features of the Enhancement</h4>
+        <ol>
+            <li>
+                <strong>Base model</strong>
+                <p>
+                    This model creates an inheritance relationship with all FEC models. By having a base model, attributes such as name, title, identifier, timestamp, etc., can be included in all sub-models while maintaining DRY code.
+                </p>
+            </li>
+            <li>
+                <strong>Page model</strong>
+                <p>
+                    The page model stores a web page’s unique information and is the sole source of information when rendering the page. By having all data in one place, updates are greatly simplified. This data structure is key for the last enhancement.
+                    <br>
+                    <br>
+                    The model’s purpose is to provide all FECs in the vertical order of presentation on the page. With all data necessary for a web page contained within a single document—even though it still holds references to FEC documents in the database—a single controller can be used to dynamically render pages according to their page document FEC components and details. This allows for a programmatic and algorithmic approach to page rendering and data gathering.
+                </p>
+            </li>
+            <li>
+                <strong>API separation of concern</strong>
+                <p>
+                    With page elements encapsulated and modular, the API manages access to each element more precisely. The base model allows API controllers and models to contain code dedicated to their function and access.
+                </p>
+            </li>
+            <li>
+                <strong>Refactored Express layouts</strong>
+                <p>
+                    Express layouts are still separate as I have a long-term plan for dynamic page generation; they could be simplified to a single layout and template for hosting every page. The layout shows elements present in the page document fetched from the database and, as such, needs no static HTML or attribute initialization or setting. Pages programmatically capture automatically generated variable names and set page attributes.
+                </p>
+            </li>
+        </ol>
+        <p>
+            I met course outcomes three and four during enhancement 2. The goal was also to meet outcome five, but I do not feel I satisfactorily did so. While enhancement three naturally pertained more to security, I was hoping I could have incorporated it further during this enhancement. Regardless, all five outcomes will be met by the end of enhancement three, as role-based authorization and route security are key aspects of the final enhancement and naturally must wait until the data structures and algorithms for accessing data are more set.
+        </p>
+
+        <h4>Reflection</h4>
+        <p>
+            I intended on addressing the admin Angular frontend further, but I soon realized that my data structures needed to be completely overhauled to simplify the code and add the ability to completely generate pages from a single file in the future; this was a stakeholder request, and I felt I should push back the admin frontend to ensure this feature's functionality later. Overall, with the page model added, I had to refactor all the API controllers to support access for the new attributes. I did not mean for this enhancement to be so focused on data structures, but I was very happy with the simplified application afterward.
+        </p>
+        <p>
+            I think the page model was my greatest idea and curse for this enhancement. After endless research, I learned you could grab all the components from the page, including distinct attributes, in a single simple file and serve them directly to the HTML without creating intermediate variables in a controller. This service is now the backbone of my frontend and I couldn't be happier.
+        </p>
+        <p>
+            With the more complicated data structures, though, I ran into a major problem. After fetching a page from the database and populating the reactive forms on the admin side, nothing would update in the database even with successful PUT requests. This was a hard wall for me until I took a short walk. Then, all at once, I realized Angular is designed to be responsive and focus on separate components.
+        </p>
+        <p>
+            Why not fetch the page document, populate the FEC forms for editing, but instead of returning the full page—the source of my problems—only update the specific FEC as needed? This is a natural solution, one I should have seen earlier, as each FEC's admin component can hold the function for updating the database directly. This also solves the problem of sending the entire page file, full of large images, to the API with every FEC component update. This design also aligns with the Angular axiom of delivering a heavy script payload first, then fetching and sending small packets of data as you interact with each element.
+        </p>
+    </article>
+</section>
